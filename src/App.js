@@ -1,10 +1,6 @@
-// import React, { Component } from 'react';
-// import Lego from './components/Lego';
-// import Navbar from './Navbar';
-// import AnotherComponent from './AnotherComponent';
+
 
 import './App.css';
-
 
 import Home from './components/Home'
 import EditLegoForm from './components/EditLegoForm'
