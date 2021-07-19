@@ -1,13 +1,220 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo {
+  display: block; 
+  object-fit: cover; 
+  object-position: center; 
+  margin-left: auto;
+  margin-right: auto;
+  height: 850px;
+  width: 850px;
+}
+
+.album-image {
+  display: block; 
+  height: 350px; 
+  width: 350px; 
+  object-fit: cover; 
+}
+
+.albums-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.album-card {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album-title {
+  color: rgb(229, 229, 233);
+  font-style: italic;
+  text-align: center;
+}
+
+.album-artist {
+  color: rgb(229, 229, 233);
+  margin-top: -10px;
+}
+
+.footer{
+  color: rgb(229, 229, 233);
+}
+
+.navbar {
+  background-color: rgb(229, 229, 233);
+  font-size: large;
+  padding: 15px;
+}
+
+.navlinks-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.navlink-li {
+  display: inline;
+  margin: 25px;
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 16px;
+}
+
+.logo-navlink-li {
+  display: inline;
+  margin: 25px;
+  text-align: center;
+}
+
+.navlink-li:hover {
+  background-color: rgb(174, 174, 177);
+  transition: 0.4s;
+}
+
+.navlink-item {
+  color:#202020;
+  text-decoration: none;
+  padding: 15px;
+  font-family: Abril Fatface;
+}
+/* 
+.navlink-logo-img {
+  background-color: #202020;
+  height: 75px;
+  width: 75px;
+}  */
+
+.form {
+  margin-top: 75px;
+}
+
+input[type=text] {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: rgb(229, 229, 233);
+  border-radius: 4px;
+}
+
+select {
+  width: 60%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(229, 229, 233);
+}
+
+.albums-container {
+  margin-top: 100px;
+}
+
+input[type=button], input[type=submit] {
+  background-color:rgb(229, 229, 233);
+  border: none;
+  border-radius: 4px;
+  /* color: white; */
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=button], input[type=submit]:hover {
+  background-color:steelblue;
+  transition: 0.3s;
+}
+
+.btn {
+  background-color:rgb(229, 229, 233);
+  border: none;
+  border-radius: 4px;
+  /* color: white; */
+  padding: 4px 8px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.delete-btn {
+  background-color:rgb(229, 229, 233);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.btn:hover {
+  background-color:rgb(174, 174, 177);
+  transition: 0.4s;
+}
+
+.delete-btn:hover {
+  background-color: rgb(231, 39, 39);
+  transition: 0.4s;
+}
+
+.flip-card {
+  background-color: transparent;
+  height: 350px; 
+  width: 350px; 
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  /* background-color: #bbb; */
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(229, 229, 233);
+  color: #424141;
+  transform: rotateY(180deg);
+  height: 350px; 
+  width: 350px; 
 }
