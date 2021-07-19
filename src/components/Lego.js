@@ -19,8 +19,8 @@ const Lego = ({ lego, removeLego, editLego }) => {
                         <p>Prices: {lego.prices}</p>
                     </div>
                 </div>
-
             </div>
+            
             <div className="album-init-info">
                 <p className="album-title">{lego.name}</p>
                 <p className="album-artist">{lego.item_number}</p>
