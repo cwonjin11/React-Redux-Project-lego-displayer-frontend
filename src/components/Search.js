@@ -7,12 +7,14 @@ const Search = (props) => {
     }
 
     return (
-        <input 
-            type="text"
-            placeholder="Search legos by name or item#"
-            onChange={onChangeHandler}
-            value={props.searchTermProp}
-        />
+        <div className="searchBar">
+            <input
+                type="text"
+                placeholder="Search legos by name or item#"
+                onChange={onChangeHandler}
+                value={props.searchTermProp}
+            />
+        </div>
     )
 }
 
