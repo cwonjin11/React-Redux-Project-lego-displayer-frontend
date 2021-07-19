@@ -3,8 +3,8 @@
 import './App.css';
 
 import Home from './components/Home'
-import EditLegoForm from './components/EditLegoForm'
-import NewLegoForm from './components/NewLegoForm';
+import EditLegoForm from './containers/EditLegoForm'
+import NewLegoForm from './containers/NewLegoForm';
 import LegoList from './containers/LegoList';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
