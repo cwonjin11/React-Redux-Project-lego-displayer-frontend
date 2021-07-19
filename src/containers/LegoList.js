@@ -17,17 +17,18 @@ class LegoList extends Component {
         this.props.fetchLegos()
     }
 
-    searchLegos = (term) => {
+    searchLegos = (term) => { 
         this.setState({
             term: term 
+            
         })
     }
 
     filterLegos = () => {
         let lowerStateTerm = this.state.term.toLowerCase();
         let filteredLegos = this.props.legos.filter(lego => 
-            lego.name.toLowerCase().includes(lowerStateTerm) ||
-            lego.item_number.toLowerCase().includes(lowerStateTerm))
+            lego.name.toLowerCase().includes(lowerStateTerm) )
+            // lego.item_number.toLowerCase().includes(lowerStateTerm))
         return (filteredLegos.map( (lego, i) => { return <Lego lego={lego} key={i} /> }))
     } 
 
