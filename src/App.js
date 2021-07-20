@@ -1,5 +1,5 @@
 
-
+import React from 'react';
 import './App.css';
 
 import Home from './components/Home'
@@ -11,7 +11,8 @@ import Footer from './components/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // class App extends Component {     // !! Important :Every single class component has a render and a return 
-function App() {
+// function App() { // no render()
+class App extends React.Component { render() {
     return (
       <div>
         <div className="App">
@@ -29,7 +30,14 @@ function App() {
         </div>
       </div>
     );
+  }
 }
+
+export default App;
+
+
+
+
 
 
 
@@ -56,6 +64,3 @@ function App() {
 // }
 
 // export default App;
-
-
-export default App;
