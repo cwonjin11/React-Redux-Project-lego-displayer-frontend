@@ -6,11 +6,11 @@ import { editLego } from '../redux/actions/index'
 
 const Lego = ({ lego, removeLego, editLego }) => {
     return (
-        <div className="album-card">
+        <div className="lego-card">
             <div className="flip-card">
                 <div className="flip-card-inner">
                     <div className="flip-card-front">
-                        <img className="album-image" src={lego.image} alt={lego.name} />
+                        <img className="lego-image" src={lego.image} alt={lego.name} />
                     </div>
                     <div className="flip-card-back">
                         <p>Lego Name : {lego.name} </p>
@@ -20,10 +20,9 @@ const Lego = ({ lego, removeLego, editLego }) => {
                     </div>
                 </div>
             </div>
-            
-            <div className="album-init-info">
-                <p className="album-title">{lego.name}</p>
-                <p className="album-artist">{lego.item_number}</p>
+            <div className="lego-init-info">
+                <p className="lego-name">{lego.name}</p>
+                <p className="lego-item_number">{lego.item_number}</p>
                 <NavLink to={`/legos/${lego.id}/edit`}><button className="btn" onClick={()=>editLego(lego)}>Edit</button></NavLink>
                 <button className="delete-btn" onClick={ () => removeLego(lego.id) }>Delete</button>
             </div>
