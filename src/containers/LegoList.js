@@ -37,7 +37,7 @@ class LegoList extends Component {
     render() { 
         return(<>
             <Search searchTermProp={this.state.term} search={this.searchLegos}/>
-            <div className="albums-container">
+            <div className="legos-container">
                 {this.filterLegos()}
             </div>
         </>)
