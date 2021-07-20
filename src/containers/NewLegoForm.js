@@ -43,6 +43,7 @@ class NewLegoForm extends Component {
     render() {
         return(
             <div className="new-form-div">
+                <h1> Add a New Lego</h1>
                 <form className="form" onSubmit={this.submitHandler}>
                     <input type="text" 
                         name="name" 
