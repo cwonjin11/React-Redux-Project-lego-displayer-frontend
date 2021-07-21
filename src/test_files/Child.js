@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Grandchild from './Grandchild';
+import Grandchild from '../Grandchild';
 import { connect } from 'react-redux'  // to hook into our react store
 
 class Child extends Component {

@@ -1,18 +1,21 @@
 
-import React from 'react';
+// import React from 'react';      // we are importing this "React" object from 'react' library. 
+import React, {Component} from 'react';      // we are importing this "React" object from 'react' library. 
 import './App.css';
 
-import Home from './components/Home'
-import EditLegoForm from './containers/EditLegoForm'
-import NewLegoForm from './containers/NewLegoForm';
-import LegoList from './containers/LegoList';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
+import Navbar from './components/Navbar';
+import Home from './components/Home'
+import LegoList from './containers/LegoList';
+import NewLegoForm from './containers/NewLegoForm';
+import EditLegoForm from './containers/EditLegoForm'
+import Footer from './components/Footer';
+ 
 // class App extends Component {     // !! Important :Every single class component has a render and a return 
 // function App() { // no render()
-class App extends React.Component { render() {
+// class App extends React.Component { render() {
+class App extends Component { 
+  render() {  //debugger
     return (
       <div>
         <div className="App">

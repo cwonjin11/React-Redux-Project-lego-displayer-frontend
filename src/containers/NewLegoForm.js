@@ -29,11 +29,6 @@ class NewLegoForm extends Component {
         // })
     }
 
-    // onChangeHandler = (e) => {
-    //     this.setState({
-    //         [e.target.name]: e.target.value
-    //     })
-    // }
     onChangeHandler = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -46,7 +41,7 @@ class NewLegoForm extends Component {
                 <h1> Add a New Lego</h1>
                 <form className="form" onSubmit={this.submitHandler}>
                     <input type="text" 
-                        name="name" 
+                        name="name" //name attribute to determine which state i need to change and which state property i need to change in one method
                         placeholder="Name" 
                         value={this.state.name} 
                         onChange={this.onChangeHandler} 

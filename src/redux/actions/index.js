@@ -1,8 +1,10 @@
-export const fetchLegos = () => {
+
+//action returs two things :1.type, 2.payload
+export const fetchLegos = () => {  //going to create an action that is going to fetch the legos from my api
     return(dispatch) => {
         return fetch('http://localhost:3000/legos')
             .then(response => response.json())
-            .then(legos => { console.log(legos)
+            .then(legos => { console.log('fetchLegos', legos)
                 dispatch({ type: 'FETCH_LEGOS', payload: legos})
             })
     }

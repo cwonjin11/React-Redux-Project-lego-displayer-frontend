@@ -5,15 +5,24 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.searchBar {
+  margin-top: 2em;
+  /* background: yellow; */
+  /* padding-left:1rem; */
+  width: 40%;
+  
+}
+
 .searchBar input[type=text] {
-  /* background-color: #fdc52c; */
-  height:auto;
-  width: 50%;
   opacity: .8;
   text-align: center;
-  background: rgb(255, 217, 1);
-  margin-left: auto;
-  
+  background: #ffffff;
+  /* background: yellow; */
+  border-color: red;
+  margin: 8px;
+  border-radius: 4px;
+  opacity: .8;
+
 }
 
 .logo {
@@ -36,21 +45,25 @@ body {
   width: 350px;
 }
 
-.album-image {
+.lego-image {
   display: block; 
   height: 350px; 
   width: 350px; 
   object-fit: cover; 
 }
-
-.albums-container {
-  /* display: grid; */
-  display: inline-block;
-  margin: 3rem;
-  /* grid-template-columns: auto auto auto; */
+.lego-image-small {
+  /* display:inline-flex;  */
+  
+  height: 350px; 
+  width: 350px; 
+  object-fit: cover; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.album-card {
+
+
+.lego-card {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 10px;
@@ -61,13 +74,13 @@ body {
   align-items: center;
 }
 
-.album-title {
+.lego-name {
   color: rgb(57, 67, 202);
   font-style: italic;
   text-align: center;
 }
 
-.album-artist {
+.lego-item_number {
   color: rgb(57, 67, 202);
   margin-top: -10px;
 }
@@ -102,16 +115,19 @@ body {
   display: inline;
   margin: 25px;
   text-align: center;
+  border-bottom: 3px solid transparent;
 }
 
 .navlink-li:hover {
-  /* background-color: rgb(255, 251, 0); */
-  background-color: red;
-  transition: 0.4s;
-  border-radius: 50px;
-
+  border-bottom: 3px solid red;
+   /* background-color: rgb(255, 251, 0); */
+  /* background-color: red; */
+  /* transition: 0.4s; */
+  /* border-radius: 50px; */
   /* opacity: .7; */
 }
+
+
 
 .navlink-item {
   color:#202020;
@@ -127,7 +143,11 @@ body {
 }  */
 
 .form {
+  /* width: 100%; */
+  /* height: 100%; */
   margin-top: 75px;
+  /* background-color: rgb(255, 217, 1); */
+  display: block;
 }
 
 input[type=text] {
@@ -135,44 +155,45 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  background-color: rgb(255, 217, 1);
+  border-color: orange;
   border-radius: 4px;
   opacity: .8;
+  font-size: 15px;
+  
 }
 
-select {
-  width: 60%;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: rgb(229, 229, 233);
-}
 
-.albums-container {
-  margin-top: 100px;
+.legos-container {
   display: inline-grid; 
   grid-template-columns: auto auto auto;
+  margin: 3rem;
+  /* padding-top: 1px; */
 }
 
 input[type=button], input[type=submit] {
   background-color:rgb(255, 217, 1);
-  border: none;
+  /* border: none; */
+  border-color: red;
   border-radius: 4px;
   /* color: white; */
   padding: 16px 32px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  
 }
 
 input[type=button], input[type=submit]:hover {
   background-color:orange;
   transition: 0.3s;
+  border-color: red;
+  
+  
 }
 
 .btn {
   background-color:rgb(255, 217, 1);
-  border: none;
+  border-color: red;
   border-radius: 4px;
   /* color: white; */
   padding: 4px 8px;
@@ -185,7 +206,7 @@ input[type=button], input[type=submit]:hover {
 
 .delete-btn {
   background-color:rgb(255, 217, 1);
-  border: none;
+  border-color: red;
   border-radius: 4px;
   padding: 4px 8px;
   text-decoration: none;
@@ -242,6 +263,7 @@ input[type=button], input[type=submit]:hover {
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: #fdc52c;
+  border-radius: 4px;
   opacity: .9;
   /* background-color: #bbb; */
   color: black;
@@ -249,14 +271,15 @@ input[type=button], input[type=submit]:hover {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: #fdc52c;
+  background-color: #ffeebf;
   color: black;
-  
+  /* opacity: .8; */
   /* transform: rotateY(180deg);
   height: 350px; 
   width: 350px;  */
   transform: rotateY(180deg);
-  border: white solid 1px;
+  border-radius: 4px;
+  border: rgb(221, 221, 221) solid 2px;
   text-align: center;
   height: relative;
   backface-visibility: hidden;

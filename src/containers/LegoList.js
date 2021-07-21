@@ -11,16 +11,17 @@ class LegoList extends Component {
         this.state = {
             term: ""
         }
+        // console.log(this.state)
     }
+    
 
-    componentDidMount() {
+    componentDidMount() {  // hey, when this LegoList component mounts, let's make a fetch request and get all the data
         this.props.fetchLegos()
     }
 
     searchLegos = (term) => { 
         this.setState({
             term: term 
-            
         })
     }
 
@@ -30,6 +31,7 @@ class LegoList extends Component {
             lego.name.toLowerCase().includes(lowerStateTerm) )
             // lego.item_number.toLowerCase().includes(lowerStateTerm))
         return (filteredLegos.map( (lego, i) => { return <Lego lego={lego} key={i} /> }))
+        
     } 
 
 
