@@ -1,6 +1,6 @@
 
-// import React from 'react';      // we are importing this "React" object from 'react' library. 
-import React, {Component} from 'react';      // we are importing this "React" object from 'react' library. 
+import React from 'react';      // we are importing this "React" object from 'react' library. 
+// import React, {Component} from 'react';      // class function =>we are importing this "React" object from 'react' library. 
 import './App.css';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -14,8 +14,8 @@ import Footer from './components/Footer';
 // class App extends Component {     // !! Important :Every single class component has a render and a return 
 // function App() { // no render()
 // class App extends React.Component { render() {
-class App extends Component { 
-  render() {  //debugger
+// class App extends Component { 
+  const App = () => {
     return (
       <div>
         <div className="App">
@@ -34,7 +34,7 @@ class App extends Component {
       </div>
     );
   }
-}
+
 
 export default App;
 
