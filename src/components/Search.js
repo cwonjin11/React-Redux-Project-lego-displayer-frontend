@@ -7,10 +7,10 @@ const Search = (props) => {
     }
 
     return (
-        <div className="searchBar">
-            <input
+        <div className="searchBar"><p>Search : </p>
+            <input 
                 type="text"
-                placeholder="Search legos by name or item#"
+                placeholder="Search legos by name"
                 onChange={onChangeHandler}
                 value={props.searchTermProp}
             />

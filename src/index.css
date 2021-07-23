@@ -1,28 +1,54 @@
 body {
-  margin: 0;
+  /* margin: 0; */
   background-color: #ffffff;
   background-size: auto;
   font-family: 'Times New Roman', Times, serif;
-}
-
-.searchBar {
-  margin-top: 2em;
-  /* background: yellow; */
-  /* padding-left:1rem; */
-  width: 40%;
   
 }
 
-.searchBar input[type=text] {
+.searchBar {
+  margin-top: 0em;
+  justify-content: center;
+  border-radius: 50px;
+  display: flex;
+  /* width:40%; */
+  
+}
+
+
+.searchBar input[type="text"] {
   opacity: .8;
   text-align: center;
-  background: #ffffff;
-  /* background: yellow; */
-  border-color: red;
+  background: rgb(255, 221, 30);
+  /* border-color: red; */
   margin: 8px;
-  border-radius: 4px;
+  /* border-radius: 50px; */
   opacity: .8;
 
+}
+/* .searchInput {
+  border-radius: 50px;
+} */
+
+.filtering {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  /* margin: 8px; */
+}
+
+button {
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  border-color: red;
+  background-color:rgb(255, 221, 30);
+}
+
+button:hover {
+  border-color: blue;
+  box-shadow: 1px 1px 5px 1px rgb(255, 217, 1);
+  cursor: pointer;
 }
 
 .logo {
@@ -53,12 +79,15 @@ body {
 }
 .lego-image-small {
   /* display:inline-flex;  */
-  
-  height: 350px; 
-  width: 350px; 
+  border:2px solid red;
+  opacity: 0.9;
+  height: 180px; 
+  width: 300px; 
   object-fit: cover; 
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  /* margin-bottom: 0px; */
 }
 
 
@@ -75,8 +104,8 @@ body {
 }
 
 .lego-name {
-  color: rgb(57, 67, 202);
-  font-style: italic;
+  color: navy;
+  /* font-style: bold; */
   text-align: center;
 }
 
@@ -135,12 +164,12 @@ body {
   padding: 15px;
   font-family: Abril Fatface;
 }
-/* 
-.navlink-logo-img {
+
+/* .navlink-logo-img {
   background-color: #202020;
   height: 75px;
   width: 75px;
-}  */
+}   */
 
 .form {
   /* width: 100%; */
@@ -148,17 +177,20 @@ body {
   margin-top: 75px;
   /* background-color: rgb(255, 217, 1); */
   display: block;
+  /* border-radius: 50px; */
+  
 }
 
-input[type=text] {
+input[type="text"] {
   width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  border-color: orange;
-  border-radius: 4px;
+  /* border: 3px solid #ffffff; */
+  border-color: red;
   opacity: .8;
   font-size: 15px;
+  border-radius: 50px;
   
 }
 
@@ -167,19 +199,21 @@ input[type=text] {
   display: inline-grid; 
   grid-template-columns: auto auto auto;
   margin: 3rem;
-  /* padding-top: 1px; */
+
 }
 
 input[type=button], input[type=submit] {
   background-color:rgb(255, 217, 1);
   /* border: none; */
   border-color: red;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-radius: 50px;
   /* color: white; */
   padding: 16px 32px;
-  text-decoration: none;
+  /* text-decoration: none; */
   margin: 4px 2px;
   cursor: pointer;
+
   
 }
 
@@ -187,6 +221,7 @@ input[type=button], input[type=submit]:hover {
   background-color:orange;
   transition: 0.3s;
   border-color: red;
+
   
   
 }
@@ -203,6 +238,7 @@ input[type=button], input[type=submit]:hover {
   margin-left: 5px;
   margin-right: 5px;
 }
+
 
 .delete-btn {
   background-color:rgb(255, 217, 1);
@@ -271,12 +307,8 @@ input[type=button], input[type=submit]:hover {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: #ffeebf;
+  background-color: orange;
   color: black;
-  /* opacity: .8; */
-  /* transform: rotateY(180deg);
-  height: 350px; 
-  width: 350px;  */
   transform: rotateY(180deg);
   border-radius: 4px;
   border: rgb(221, 221, 221) solid 2px;
@@ -284,4 +316,5 @@ input[type=button], input[type=submit]:hover {
   height: relative;
   backface-visibility: hidden;
   min-width: 100%;  
+  
 }

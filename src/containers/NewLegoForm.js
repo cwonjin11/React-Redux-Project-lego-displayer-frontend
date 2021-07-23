@@ -15,10 +15,11 @@ class NewLegoForm extends Component {
         }
     }
 
-
-    submitHandler = (e) => {
+    //submitHandler will going to call an action that is going to dispatch that new object to our reducer 
+    //so we can update our store state.
+    submitHandler = (e) => {   //1. Click for submit button which triggers onSubmit event handler
         e.preventDefault();
-        this.props.addNewLego(this.state)
+        this.props.addNewLego(this.state)  // 2. The event handler calls this.props.addNewLego(this.state) which is invoking our action creator
         this.props.history.push('/legos')
         // this.setState({
         //     name: "",
@@ -30,7 +31,7 @@ class NewLegoForm extends Component {
     }
 
     onChangeHandler = (e) => {
-        this.setState({
+        this.setState({ //our onChangeHandler method makes use of the 'setState' method, which is what we use to alter state
             [e.target.name]: e.target.value
         })
     }
@@ -77,4 +78,4 @@ class NewLegoForm extends Component {
         )
     }
 }
-export default connect(null, { addNewLego })(NewLegoForm)
+export default connect(null, { addNewLego })(NewLegoForm)  //3. The returned action object is then passed as an argument to the dispatch method - this happens behind the scenes since connect recognized that we passed an object as the second argument

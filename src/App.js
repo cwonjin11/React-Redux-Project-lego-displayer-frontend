@@ -1,6 +1,7 @@
 
 import React from 'react';      // we are importing this "React" object from 'react' library. 
 // import React, {Component} from 'react';      // class function =>we are importing this "React" object from 'react' library. 
+// import './index.css';
 import './App.css';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';

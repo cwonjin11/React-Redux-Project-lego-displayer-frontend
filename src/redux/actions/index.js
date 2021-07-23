@@ -10,6 +10,7 @@ export const fetchLegos = () => {  //going to create an action that is going to 
     }
 }
 
+
 export const addNewLego = (newLego) => {
     return(dispatch) => {
         return fetch('http://localhost:3000/legos', {
@@ -19,18 +20,22 @@ export const addNewLego = (newLego) => {
         })
         .then(response => response.json())
         .then(newLego => {
-            dispatch({ type: 'ADD_LEGO', payload: newLego })
+            dispatch({ type: 'ADD_LEGO', payload: newLego })   //4. The dispatch method then invokes our reducer and passes along the action object as an argument
         })
     }
 }
 
 export const removeLego = (legoId) => {
-    return(dispatch) => {  dispatch({ type: 'REMOVE_LEGO', payload: legoId })
+    return(dispatch) => {  
         return fetch(`http://localhost:3000/legos/${legoId}`, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }
         })
-    }
+        .then(response => response.json())
+        .then(lego => {
+            dispatch({ type: 'REMOVE_LEGO', payload: lego.id })
+        })
+    }   
 }
 
 export const editLego = (lego) => {
@@ -46,3 +51,28 @@ export const editLego = (lego) => {
         })
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// if i dont set render json to backend delete action, use this code
+
+// export const removeLego = (legoId) => {
+//     return(dispatch) => {  dispatch({ type: 'REMOVE_LEGO', payload: legoId })
+//         return fetch(`http://localhost:3000/legos/${legoId}`, {
+//             method: 'DELETE',
+//             headers: { 'Content-Type': 'application/json' }
+//         })
+//     }
+// }

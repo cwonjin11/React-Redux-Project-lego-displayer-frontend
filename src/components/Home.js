@@ -9,4 +9,4 @@ const Home = () => {
         <img className="logo" src="/lego_background1.jpeg" alt="legohome" />
     </>)
 }
-export default Home
+export default Home;

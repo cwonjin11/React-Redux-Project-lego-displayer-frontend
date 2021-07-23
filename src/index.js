@@ -14,6 +14,8 @@ import App from './App';
 //   console.log("You've just clicked on 👀👃🏼👀", e.target)
 // })
 
+
+//this one is for dev tools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 //need to create store for redux => createStore 1. reducer, 2. dev tools, 3. thunk
