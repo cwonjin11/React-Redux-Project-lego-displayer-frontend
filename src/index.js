@@ -1,6 +1,6 @@
 
-import React from 'react';          // we are importing React object from the 'react' library
-import ReactDOM from 'react-dom';   // library that is responsible for the virtual DOM 
+import React from 'react';        
+import ReactDOM from 'react-dom';   
 import './index.css';
 import { Provider } from 'react-redux'
 import { createStore, compose, applyMiddleware } from 'redux'
@@ -10,23 +10,19 @@ import reportWebVitals from './reportWebVitals';
 
 import App from './App';
 
-// document.addEventListener("click", (e) => {
-//   console.log("You've just clicked on 👀👃🏼👀", e.target)
-// })
 
 
-//For Redux Dev tools
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-//need to create store for redux => createStore 1. reducer, 2. dev tools, 3. thunk
+
 let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
-//rootReducer : import our reducers and give us access for our store.
-//composeEnhancers : to access to our dev tools
+
 
 ReactDOM.render(
-  <React.StrictMode>  {/* StricMode = make sure all components start with capital letter, conventions or standards are followed etc. Good to practice with strict mode */} 
-    <Provider store={store}> {/* wrap Provider pass in store as props around App to access to our store  */}
-       <App />   {/*connect app to the redux store */}
+  <React.StrictMode>  
+    <Provider store={store}> 
+       <App />   
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

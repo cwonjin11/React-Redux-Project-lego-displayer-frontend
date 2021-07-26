@@ -9,25 +9,21 @@ import Filtering from '../components/Filtering';
 class LegoList extends Component {
 
     constructor() {
-        super()  //we should call super() in the constructor since we are inheriting from another class via the extends keyword
-        this.state = {  //'this' is an instance of LegoList class  
-            term: ""     // it is saying that this instance of LegoList class should have a property called state that has a value of {term: ""}
+        super()  
+        this.state = {  
+            term: ""     
         }
-        // console.log(this.state)
     }
     
-    //once this component is loaded, then, do something
-    componentDidMount() {  // hey, when this LegoList component mounts, let's make a fetch request and get all the data
-        // setTimeout(() => {
-        //     this.props.fetchLegos()          // setTimeout for 5 sec and then fetchLegos
-        //   }, 5000)
+
+    componentDidMount() {  
 
             this.props.fetchLegos()
 
     }   
 
     searchLegos = (term) => { 
-        this.setState({  //our searchLegos method makes use of the 'setState' method, which is what we use to alter state
+        this.setState({  
             term: term 
         })
     }
@@ -81,4 +77,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps, { fetchLegos })(LegoList) // connect the data in mapStateToProps
+export default connect(mapStateToProps, { fetchLegos })(LegoList) 

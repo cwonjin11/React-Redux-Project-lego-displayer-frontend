@@ -2,12 +2,12 @@
 export default ( state = [], action ) => {  console.log("inside reducer")//takes action and state and reduces it into a new state
     switch(action.type) {
         case "FETCH_LEGOS":
-            return [...action.payload]  // similar to params in rails
+            return [...action.payload]  
         case "ADD_LEGO":  
-            return [...state, action.payload]  //5. The reducer then returns a NEW version of our state which triggers any component that receives our redux state as props to re-render
+            return [...state, action.payload]  
         case "REMOVE_LEGO":
-            let updatedLegos = state.filter(lego => lego.id !== action.payload) //lego id is not equal to action.payload
-            return [...updatedLegos]  //spreading out updatedLegos 
+            let updatedLegos = state.filter(lego => lego.id !== action.payload) 
+            return [...updatedLegos]  
         case "EDIT_LEGO":
 
             let legoAll = state.filter(lego => lego.id !== action.payload)

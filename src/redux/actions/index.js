@@ -1,6 +1,6 @@
 
-//action returs two things :1.type, 2.payload
-export const fetchLegos = () => {  //going to create an action that is going to fetch the legos from my api
+
+export const fetchLegos = () => {  
     return(dispatch) => {
         return fetch('http://localhost:3000/legos')
             .then(response => response.json())
@@ -20,7 +20,7 @@ export const addNewLego = (newLego) => { console.log("redux/action/index : top o
         })
         .then(response => response.json())
         .then(newLego => { console.log("redux/action:index : right before dispatch")
-        dispatch({ type: 'ADD_LEGO', payload: newLego })   //4. The dispatch method then invokes our reducer and passes along the action object as an argument
+        dispatch({ type: 'ADD_LEGO', payload: newLego })   
         console.log("redux/action:index : botton of thunk function ")
         }) 
     }
