@@ -11,17 +11,18 @@ export const fetchLegos = () => {  //going to create an action that is going to 
 }
 
 
-export const addNewLego = (newLego) => {
-    return(dispatch) => {
+export const addNewLego = (newLego) => { console.log("redux/action/index : top of addNewLego")
+    return (dispatch) => { console.log("redux/action:index : top of thunk function")
         return fetch('http://localhost:3000/legos', {
             method: 'POST', 
             headers: { 'Content-Type': 'application/json' }, 
             body: JSON.stringify({lego: newLego})
         })
         .then(response => response.json())
-        .then(newLego => {
-            dispatch({ type: 'ADD_LEGO', payload: newLego })   //4. The dispatch method then invokes our reducer and passes along the action object as an argument
-        })
+        .then(newLego => { console.log("redux/action:index : right before dispatch")
+        dispatch({ type: 'ADD_LEGO', payload: newLego })   //4. The dispatch method then invokes our reducer and passes along the action object as an argument
+        console.log("redux/action:index : botton of thunk function ")
+        }) 
     }
 }
 

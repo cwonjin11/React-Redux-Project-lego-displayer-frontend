@@ -15,7 +15,7 @@ import App from './App';
 // })
 
 
-//this one is for dev tools
+//For Redux Dev tools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 //need to create store for redux => createStore 1. reducer, 2. dev tools, 3. thunk
@@ -26,7 +26,7 @@ let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 ReactDOM.render(
   <React.StrictMode>  {/* StricMode = make sure all components start with capital letter, conventions or standards are followed etc. Good to practice with strict mode */} 
     <Provider store={store}> {/* wrap Provider pass in store as props around App to access to our store  */}
-      <App />
+       <App />   {/*connect app to the redux store */}
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

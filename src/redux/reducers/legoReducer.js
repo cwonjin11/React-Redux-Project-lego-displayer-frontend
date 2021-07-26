@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-export default ( state = [], action ) => {
+export default ( state = [], action ) => {  console.log("inside reducer")//takes action and state and reduces it into a new state
     switch(action.type) {
         case "FETCH_LEGOS":
             return [...action.payload]  // similar to params in rails

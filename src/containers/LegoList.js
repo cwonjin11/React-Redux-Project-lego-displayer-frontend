@@ -18,7 +18,12 @@ class LegoList extends Component {
     
     //once this component is loaded, then, do something
     componentDidMount() {  // hey, when this LegoList component mounts, let's make a fetch request and get all the data
-        this.props.fetchLegos()
+        // setTimeout(() => {
+        //     this.props.fetchLegos()          // setTimeout for 5 sec and then fetchLegos
+        //   }, 5000)
+
+            this.props.fetchLegos()
+
     }   
 
     searchLegos = (term) => { 
@@ -28,11 +33,9 @@ class LegoList extends Component {
     }
 
     filterLegos = () => {
-        // let lowerStateTerm = this.state.term.toLowerCase();
         let lowerStateTerm = this.state.term.toLowerCase();
         let filteredLegos = this.props.legos.filter(lego => 
             lego.name.toLowerCase().includes(lowerStateTerm) )
-            // lego.item_number.toLowerCase().includes(lowerStateTerm))
             
             
             switch(this.state.sort) {
@@ -43,13 +46,7 @@ class LegoList extends Component {
                 case "PriceHigh":
                     return filteredLegos.sort((a,b) => a.prices > b.prices ? 1 : -1).map( (lego, index) => { return <Lego lego={lego} key={index} /> })
                 case "PriceLow":
-                    return filteredLegos.sort((a,b) => a.prices > b.prices ? 1 : -1).reverse().map( (lego, index) => { return <Lego lego={lego} key={index} /> })   
-                    
-                    
-                // case "CreationOld":
-                //     return filteredLegos.map( (lego, index) => { return <Lego lego={lego} key={index} /> })
-                // case "CreationYoung":
-                //     return filteredLegos.reverse().map( (lego, index) => { return <Lego lego={lego} key={index} /> })  
+                    return filteredLegos.sort((a,b) => a.prices > b.prices ? 1 : -1).reverse().map( (lego, index) => { return <Lego lego={lego} key={index} /> })     
                 default:
                     return (filteredLegos.map( (lego, index) => { return <Lego lego={lego} key={index} /> }))
             }
@@ -61,13 +58,14 @@ class LegoList extends Component {
 
 
 
-    render() { 
+    render() { console.log("in legolist render")
         return(<>
             <div className="filtering">
             <Filtering sort={this.state.sort} updateSort={this.updateSort} />
             </div><br />
-
+            <div>
             <Search searchTermProp={this.state.term} search={this.searchLegos}/>
+            </div>
             <div className="legos-container">
                 {this.filterLegos()}
             </div>
@@ -82,4 +80,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { fetchLegos })(LegoList)
+
+export default connect(mapStateToProps, { fetchLegos })(LegoList) // connect the data in mapStateToProps

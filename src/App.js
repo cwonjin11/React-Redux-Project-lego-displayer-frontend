@@ -20,11 +20,11 @@ import Footer from './components/Footer';
     return (
       <div>
         <div className="App">
-          <Router>
+          <Router>  {/* it wraps our main application routing */}
             <Navbar />
             <Switch>
               {/* <Lego /> */}
-              <Route exact path="/" component={ Home } />
+              <Route exact path="/" component={ Home  } />
               <Route exact path="/legos" component={ LegoList } />
               <Route exact path="/legos/new" component={ NewLegoForm } />
               <Route exact path="/legos/:id/edit" component={ EditLegoForm } />

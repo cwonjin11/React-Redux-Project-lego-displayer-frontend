@@ -124,14 +124,14 @@ button:hover {
   padding: 20px;
 }
 
-.navlinks-list {
+.navbarList {
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: right;
 }
 
-.navlink-li {
+.navbarLI {
   display: inline;
   margin: 25px;
   /* margin-right:auto; */
@@ -147,29 +147,20 @@ button:hover {
   border-bottom: 3px solid transparent;
 }
 
-.navlink-li:hover {
+.navbarLI:hover {
   border-bottom: 3px solid red;
-   /* background-color: rgb(255, 251, 0); */
-  /* background-color: red; */
-  /* transition: 0.4s; */
-  /* border-radius: 50px; */
-  /* opacity: .7; */
 }
 
 
 
 .navlink-item {
-  color:#202020;
+
   text-decoration: none;
-  padding: 15px;
-  font-family: Abril Fatface;
+  padding: 20px;
+
 }
 
-/* .navlink-logo-img {
-  background-color: #202020;
-  height: 75px;
-  width: 75px;
-}   */
+
 
 .form {
   /* width: 100%; */

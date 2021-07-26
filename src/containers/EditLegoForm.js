@@ -34,7 +34,7 @@ class EditLegoForm extends Component {
     submitHandler = e => {
         e.preventDefault()
         this.props.editLego(this.state)
-        this.props.history.push('/legos')
+        this.props.history.push('/legos')  
     }
 
     render() {
@@ -88,6 +88,7 @@ class EditLegoForm extends Component {
 }
 
 const mapStateToProps = (state, legoId) => {
+    console.log(legoId)
     const id = parseInt(legoId.match.params.id)
     return {
         lego: state.legos.find(lego => lego.id === id)
